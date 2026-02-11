@@ -37,7 +37,6 @@ button {
     cursor: pointer;
     backdrop-filter: blur(6px);
     background:rgba(255,255,255,0.2);
-    cursor: pointer;
 }
 
 .top-bar {
@@ -58,6 +57,18 @@ button {
 
 #draw {
     display: block;
+}
+
+#drawBtn .container {
+    padding: 4px;
+    color: black;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    backdrop-filter: blur(6px);
+    background:rgba(255,255,255,0.2);
 }
 
 .container {
