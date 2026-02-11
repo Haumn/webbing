@@ -1,9 +1,28 @@
-let background_toggle = false;
+document.addEventListener("DOMContentLoaded", () => {
+  let background_toggle = false;
 
-// Changing the background and cycles
-function changeBackground() {
+  const drawing = document.getElementById("drawing");
+  const drawBtn = document.getElementById("drawBtn");
+  const backBtn = document.getElementById("backBtn");
+  const container = document.querySelector(".container");
+
+  function changeBackground() {
     background_toggle = !background_toggle;
     document.body.style.backgroundImage = background_toggle
-        ? 'url("https://www.bing.com/th/id/OGC.cd8aeca8aac766ce08d6a2ab7e9a8c39?o=7&cb=ucfimg2&pid=1.7&rm=3&rurl=https%3a%2f%2fmedia.tenor.com%2fimages%2fcd8aeca8aac766ce08d6a2ab7e9a8c39%2ftenor.gif&ehk=ppooKjAkoPjRYmZhvQt9tlgO4udy6ZI7Lb4zPHzNCG0%3d&ucfimg=1")'
-        : 'url("https://media1.tenor.com/m/wCrZqAL1cWMAAAAd/spinning-fish.gif")';
-}
+      ? 'url("https://www.bing.com/th/id/OGC.cd8aeca8aac766ce08d6a2ab7e9a8c39?...")'
+      : 'url("https://media1.tenor.com/m/wCrZqAL1cWMAAAAd/spinning-fish.gif")';
+  }
+
+  drawBtn.addEventListener("click", () => {
+    container.classList.add("hidden");
+    drawing.classList.remove("hidden");
+  });
+
+  backBtn.addEventListener("click", () => {
+    drawing.classList.add("hidden");
+    container.classList.remove("hidden");
+  });
+
+  // expose function for inline HTML onclick
+  window.changeBackground = changeBackground;
+});
