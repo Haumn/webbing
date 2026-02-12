@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const drawing = document.getElementById("drawing");
   const drawBtn = document.getElementById("drawBtn");
   const backBtn = document.getElementById("backBtn");
+  const header = document.querySelector(".header");
   const container = document.querySelector(".container");
 
   function changeBackground() {
@@ -15,12 +16,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   drawBtn.addEventListener("click", () => {
     container.classList.add("hidden");
+    header.classList.add("hidden");
     drawing.classList.remove("hidden");
   });
 
   backBtn.addEventListener("click", () => {
     drawing.classList.add("hidden");
     container.classList.remove("hidden");
+    header.classList.remove("hidden");
   });
 
   // expose function for inline HTML onclick
