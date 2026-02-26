@@ -37,7 +37,17 @@ button {
     cursor: pointer;
     backdrop-filter: blur(6px);
     background:rgba(255,255,255,0.2);
+    transition: transform 0.3s ease;
 }
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
 
 .top-bar {
     top: 0;
@@ -73,7 +83,7 @@ button {
 
 .container {
   width: 90%;
-  max-width: 1px;
+  max-width: 600px;
   margin: 4rem auto; 
   padding: 1.5rem;
   display: flex;
