@@ -4,10 +4,19 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Site</title>
-        <link rel="stylesheet" href="Style.css">
+        <link rel="stylesheet" href="game.css">
     </head>
     <body>
-        <canvas id="game_draw"></canvas>
-    </body>
+        <div class="top-bar">
+            <button id="backBtn">Back</button>
+            <button id="save-btn">Save</button>
+            <button id="clear-btn">Clear</button>
+            <p id="shapeResult">Shape</p>
+        </div>
 
+        <canvas id="game_draw"></canvas>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="game.js"></script>
+    </body>
 </html>

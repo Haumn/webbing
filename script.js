@@ -26,7 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
     header.classList.remove("hidden");
   });
   
-  function openGame() { window.location.href="game.html"; }
 
   // expose function for inline HTML onclick
   window.changeBackground = changeBackground;

@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#game_draw {
+    display: block;
+}
+
+.top-bar {
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    background-color: #3af;
+    border-bottom: 2px solid black;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.top-bar * {
+    margin: 5px 10px;
+}
